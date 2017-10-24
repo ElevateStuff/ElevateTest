@@ -1,9 +1,10 @@
 
 /// <reference path="./steps.d.ts" />
 
-Feature('Google Test');
+Feature('Elevate Solutions Home Page Test');
 
-Scenario('test something', (I) => {
-      I.amOnPage('https://www.google.com');
-      I.see('Google');
+Scenario('Validate Elevate Solutions Home Page', (I) => {
+      I.amOnPage('https://test.elevatesolutions.co/');
+      I.see('LEARN MORE');
+      I.see('LOGIN');
 });
