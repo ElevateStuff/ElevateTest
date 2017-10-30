@@ -4,13 +4,21 @@
     "WebDriverIO": {
       "url": "http://localhost",
       "browser": "chrome",
-      "restart": true
+      "smartWait": 5000,
+      "restart": true,
+      "windowSize": "maximize",
+      "timeouts": {
+        "script": 60000,
+        "page load": 10000
+      }
     }
   },
   "include": {
     "I": "./steps_file.js",
     "loginPage": "./pages/Login.js",
-    "homePage": "./pages/Home.js"
+    "homePage": "./pages/Home.js",
+    "elevateMenuPage": "./pages/ElevateMenu.js",
+    "addContactPage": "./pages/AddContact.js"
   },
   "mocha": {
     "reporterOptions": {
