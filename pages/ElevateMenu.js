@@ -9,13 +9,13 @@ module.exports = {
 
    // setting locators
    homeLink: {xpath: "//div[contains(text(),'Home')]"},
-   
+
   contactLink: {xpath: "//div[contains(text(),'Contact')]"},
     searchDropDownOpen: {xpath: "//li[@class='dropdown open']"},
-    searchContactLink: {xpath: "//a[@href='/searchCustomer.html']"},
+    searchContactLink: {xpath: "//li[@class='dropdown open']//a[@href='/searchCustomer.html']"},
     addContactLink: {xpath: "//li[@class='dropdown open']//a[contains(text(),'Add Contact')]"},
-    viewAllContactLink: {xpath: "//a[@href='/searchCustomer.html?ALL']"},
-    sendACardtoContactLink: {xpath: "//a[@href='/mCards.html']"},
+    viewAllContactLink: {xpath: "//li[@class='dropdown open']//a[@href='/searchCustomer.html?ALL']"},
+    sendACardtoContactLink: {xpath: "//li[@class='dropdown open']//a[@href='/mCards.html']"},
 
    businessLink: {xpath: "//div[contains(text(),'Business')]"},
    cardsLink: {xpath: "///div[contains(text(),'Cards')]"},
