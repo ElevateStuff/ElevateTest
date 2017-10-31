@@ -26,11 +26,18 @@ module.exports = {
   //Send Cards To Contact Page
   sendCardsToContactsButton: {xpath: "//button[contains(text(),'Send a Card to These Contacts')]"},
   selectAllCheckBox: {xpath: "//input[@id='selectAll']"},
+  sendCardsSearchButton: {xpath: "//button[@id='searchMultCardContact']"},
 
   searchContactsByName(name) {
     I.waitForVisible(this.nameTextBox, 30);
     I.fillField(this.nameTextBox, name);
     I.click(this.searchButton);
+  },
+
+  searchContactsByNameForCards(name) {
+    I.waitForVisible(this.nameTextBox, 30);
+    I.fillField(this.nameTextBox, name);
+    I.click(this.sendCardsSearchButton);
   },
 
   searchContactsByCity(city) {

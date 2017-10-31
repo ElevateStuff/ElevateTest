@@ -36,7 +36,7 @@ Scenario('Send a card to a Contact', (I, homePage, loginPage, elevateMenuPage, s
     homePage.clickLoginButton();
     loginPage.login('kyletice@rocketmail.com','kyle');
     elevateMenuPage.clickSendACardToContactLink();
-    searchContactPage.searchContactsByName('Adolf');
+    searchContactPage.searchContactsByNameForCards('Adolf');
     searchContactPage.clickSendCardsToContactButton();
     sendACardPage.validateTableData('Miss Adolf Carroll V',
     '87714 Chesley Point Apt. 749, Port Zola, NM 93870', 'Lead');
