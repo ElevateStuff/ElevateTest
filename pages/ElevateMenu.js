@@ -28,6 +28,24 @@ module.exports = {
     I.click(this.contactLink);
     I.waitForVisible(this.searchDropDownOpen, 30);
     I.click(this.addContactLink);
+  },
+
+  clickSearchContactLink() {
+    I.click(this.contactLink);
+    I.waitForVisible(this.searchDropDownOpen, 30);
+    I.click(this.searchContactLink);
+  },
+
+  clickViewAllContactLink() {
+    I.click(this.contactLink);
+    I.waitForVisible(this.searchDropDownOpen, 30);
+    I.click(this.viewAllContactLink);
+  },
+
+  clickSendACardToContactLink() {
+    I.click(this.contactLink);
+    I.waitForVisible(this.searchDropDownOpen, 30);
+    I.click(this.sendACardtoContactLink);
   }
 
 }

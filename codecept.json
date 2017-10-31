@@ -18,7 +18,9 @@
     "loginPage": "./pages/Login.js",
     "homePage": "./pages/Home.js",
     "elevateMenuPage": "./pages/ElevateMenu.js",
-    "addContactPage": "./pages/AddContact.js"
+    "addContactPage": "./pages/AddContact.js",
+    "searchContactPage": "./pages/SearchContact.js",
+    "businessPage": "./pages/Business.js"
   },
   "mocha": {
     "reporterOptions": {

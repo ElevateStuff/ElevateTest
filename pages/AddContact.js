@@ -112,6 +112,7 @@ module.exports = {
 
     //Validate the customer added message displays
     I.waitForVisible("//strong[contains(text(),'" + firstName + " " + lastName + "')]", 30);
+    I.see(firstName + " " + lastName);
     I.click(this.customerAddedCloseButton);
   }
 
