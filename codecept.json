@@ -20,7 +20,8 @@
     "elevateMenuPage": "./pages/ElevateMenu.js",
     "addContactPage": "./pages/AddContact.js",
     "searchContactPage": "./pages/SearchContact.js",
-    "businessPage": "./pages/Business.js"
+    "businessPage": "./pages/Business.js",
+    "sendACardPage": "./pages/SendACard.js"
   },
   "mocha": {
     "reporterOptions": {

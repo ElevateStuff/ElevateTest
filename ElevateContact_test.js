@@ -30,3 +30,14 @@ Scenario('View All Contacts', (I, homePage, loginPage, elevateMenuPage, searchCo
     searchContactPage.validateContactShowsInTable('Adolf','Carroll');
     searchContactPage.validateContactShowsInTable('Isabell', 'Ward');
 });
+
+Scenario('Send a card to a Contact', (I, homePage, loginPage, elevateMenuPage, searchContactPage, sendACardPage) => {
+    homePage.validatePage();
+    homePage.clickLoginButton();
+    loginPage.login('kyletice@rocketmail.com','kyle');
+    elevateMenuPage.clickSendACardToContactLink();
+    searchContactPage.searchContactsByName('Adolf');
+    searchContactPage.clickSendCardsToContactButton();
+    sendACardPage.validateTableData('Miss Adolf Carroll V',
+    '87714 Chesley Point Apt. 749, Port Zola, NM 93870', 'Lead');
+});

@@ -23,6 +23,10 @@ module.exports = {
   viewContactDetails: {xpath: "//input[@value='View Contact Details']"},
   allContactsText: {xpath: "//strong[contains(text(),'All Contacts')]"},
 
+  //Send Cards To Contact Page
+  sendCardsToContactsButton: {xpath: "//button[contains(text(),'Send a Card to These Contacts')]"},
+  selectAllCheckBox: {xpath: "//input[@id='selectAll']"},
+
   searchContactsByName(name) {
     I.waitForVisible(this.nameTextBox, 30);
     I.fillField(this.nameTextBox, name);
@@ -60,5 +64,9 @@ module.exports = {
   clickAllButton() {
     I.click(this.allButton);
   },
+
+  clickSendCardsToContactButton() {
+    I.click(this.sendCardsToContactsButton);
+  }
 
 }
