@@ -1,4 +1,5 @@
 'use strict';
+
 let I;
 
 module.exports = {
@@ -8,16 +9,14 @@ module.exports = {
   },
 
   // setting locators
-  fields: {
-    email: "//input[@name='username']",
-    password: "//input[@name='password']"
-  },
+  email: {xpath: "//input[@name='username']"},
+  password: {xpath: "//input[@name='password']"},
   submitButton: {css: '#login'},
 
   // introducing methods
-  sendForm(email, password) {
-    I.fillField(this.fields.email, email);
-    I.fillField(this.fields.password, password);
+  login(email, password) {
+    I.fillField(this.email, email);
+    I.fillField(this.password, password);
     I.click(this.submitButton);
   }
 }

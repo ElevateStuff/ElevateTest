@@ -18,6 +18,11 @@ module.exports = {
 
   resultsText: {xpath: "//h3[contains(@class='panel-title']"},
 
+  //View All items on Page
+  allButton: {xpath: "//button[contains(text(),'All')]"},
+  viewContactDetails: {xpath: "//input[@value='View Contact Details']"},
+  allContactsText: {xpath: "//strong[contains(text(),'All Contacts')]"},
+
   searchContactsByName(name) {
     I.waitForVisible(this.nameTextBox, 30);
     I.fillField(this.nameTextBox, name);
@@ -45,6 +50,15 @@ module.exports = {
   validateContactShowsInTable(firstName, lastName) {
     I.see(firstName);
     I.see(lastName);
-  }
+  },
+
+  validateAllContacts() {
+    I.waitForVisible(this.allButton, 30);
+    I.see(this.allContactsText);
+  },
+
+  clickAllButton() {
+    I.click(this.allButton);
+  },
 
 }
