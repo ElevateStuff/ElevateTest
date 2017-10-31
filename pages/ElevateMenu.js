@@ -15,7 +15,7 @@ module.exports = {
     searchContactLink: {xpath: "//li[@class='dropdown open']//a[@href='/searchCustomer.html']"},
     addContactLink: {xpath: "//li[@class='dropdown open']//a[contains(text(),'Add Contact')]"},
     viewAllContactLink: {xpath: "//li[@class='dropdown open']//a[@href='/searchCustomer.html?ALL']"},
-    sendACardtoContactLink: {xpath: "//li[@class='dropdown open']//a[@href='/mCards.html']"},
+    sendACardToContactLink: {xpath: "//li[@class='dropdown open']//a[@href='/mCards.html']"},
 
    businessLink: {xpath: "//div[contains(text(),'Business')]"},
    cardsLink: {xpath: "///div[contains(text(),'Cards')]"},
@@ -45,7 +45,31 @@ module.exports = {
   clickSendACardToContactLink() {
     I.click(this.contactLink);
     I.waitForVisible(this.searchDropDownOpen, 30);
-    I.click(this.sendACardtoContactLink);
+    I.click(this.sendACardToContactLink);
+  },
+
+  clickCardsLink() {
+    I.click(this.cardsLink);
+  },
+
+  clickFAQLink() {
+    I.click(this.fAQLink);
+  },
+
+  clickMyAccountLink() {
+    I.click(this.myAccountLink);
+  },
+
+  clickBusinessLink() {
+    I.click(this.businessLink);
+  },
+
+  clickMapLink() {
+    I.click(this.mapLink);
+  },
+
+  clickLogoutLink() {
+    I.click(this.logoutLink);
   }
 
 }

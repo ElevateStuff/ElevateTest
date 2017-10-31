@@ -13,10 +13,19 @@ module.exports = {
   password: {xpath: "//input[@name='password']"},
   submitButton: {css: '#login'},
 
-  // introducing methods
+  //methods
+
+  validatePage() {
+    I.seeElement(this.email);
+    I.seeElement(this.password);
+    I.seeElement(this.submitButton);
+  },
+
   login(email, password) {
     I.fillField(this.email, email);
     I.fillField(this.password, password);
     I.click(this.submitButton);
   }
+
+
 }
